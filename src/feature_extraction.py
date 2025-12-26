@@ -8,7 +8,7 @@ def extract_features(texts):
   """
     # For my understanding:
     # ignore less then min_df=5 documents
-    # ignore more then max_df=0.8 documents
+    # ignore words that appear in more then max_df=0.8 (ratio) documents
     # use sublinear tf scaling, i.e. replace tf with 1 + log(tf)
     # use idf weighting
   """
