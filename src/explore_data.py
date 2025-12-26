@@ -1,6 +1,7 @@
 file_path = 'data/raw/SMSSpamCollection'
 data_list = []
 
+TRAINING_DATA_RATIO = 0.7
 
 def read_data():
   try:
@@ -24,7 +25,7 @@ def read_data():
 
 
       if(data_list):
-          split_index = int(len(data_list) * 0.7)
+          split_index = int(len(data_list) * TRAINING_DATA_RATIO)
           print("SPLIT INDEX: ", split_index)
           train_data = data_list[:split_index] # From start to split_index
           test_data = data_list[split_index:]  # From split_index to the end
