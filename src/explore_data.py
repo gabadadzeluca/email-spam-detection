@@ -22,11 +22,11 @@ def read_data():
                   # handle cases where there might only be one token
                   print(f"Skipping malformed line: {line}")
 
-      # preview the result
-      for item in data_list[:5]:
-          print(f"Token: {item[0]} | Content: {item[1]}")
-
+      if(data_list):
+          return data_list[0:6] # return first 6 entries for test purposes
+      else:
+          return None
+      
   except FileNotFoundError:
       print("The file was not found. Check your path:", file_path)
-
-read_data()
+      return None
