@@ -22,8 +22,13 @@ def read_data():
                   # handle cases where there might only be one token
                   print(f"Skipping malformed line: {line}")
 
+
       if(data_list):
-          return data_list[0:6] # return first 6 entries for test purposes
+          split_index = int(len(data_list) * 0.7)
+          print("SPLIT INDEX: ", split_index)
+          train_data = data_list[:split_index] # From start to split_index
+          test_data = data_list[split_index:]  # From split_index to the end
+          return train_data # return first N entries for test purposes
       else:
           return None
       
