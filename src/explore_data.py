@@ -27,6 +27,6 @@ def read_data():
           print(f"Token: {item[0]} | Content: {item[1]}")
 
   except FileNotFoundError:
-      print("The file was not found. Check your path: 'data/raw/SSMSSpamCollection'")
+      print("The file was not found. Check your path:", file_path)
 
 read_data()
