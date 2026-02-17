@@ -29,7 +29,7 @@ def read_data():
           print("SPLIT INDEX: ", split_index)
           train_data = data_list[:split_index] # From start to split_index
           test_data = data_list[split_index:]  # From split_index to the end
-          return train_data # return first N entries for training purposes
+          return train_data, test_data
       else:
           return None
       
