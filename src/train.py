@@ -12,4 +12,4 @@ def train_model(texts):
   features, tfidf_vectorizer = extract_features(data)
   model = MultinomialNB()
   model.fit(features, labels)
-  return model
+  return model, tfidf_vectorizer
