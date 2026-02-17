@@ -21,9 +21,4 @@ def extract_features(texts):
   )
   print("Extracted features shape:", df.shape)
 
-  # Look at index-th email's non-zero features
-  doc_index = 0
-  non_zero = df.iloc[doc_index][df.iloc[doc_index] > 0]
-  print(non_zero)
-
   return features, tfidf
